@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order and Inventory Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Order and Inventory Management System</h1>
+    <div id="app">
+        <section>
+            <h2>Create Order</h2>
+            <form id="orderForm">
+                <input type="text" id="productName" placeholder="Product Name" required>
+                <input type="number" id="quantity" placeholder="Quantity" required>
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+        <section>
+            <h2>Inventory</h2>
+            <ul id="inventoryList"></ul>
+        </section>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
