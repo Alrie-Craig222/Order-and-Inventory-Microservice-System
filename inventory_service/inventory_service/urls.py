@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import views  # Import the views from the current app
 from django.http import HttpResponse
 
@@ -26,6 +26,8 @@ def home(request):
 urlpatterns = [
     path('', home),
     path('admin/', admin.site.urls),
-    path('inventory/', views.index, name='inventory'),  # Correct the path to refer to inventory_home
+    # path('inventory/', views.index, name='inventory'),  # Correct the path to refer to inventory_home
+     path('inventory/', include('inventory.urls')),  # Delegate inventory URLs to the app
+     
 ]
 
