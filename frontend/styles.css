@@ -1,0 +1,254 @@
+/* body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#app {
+    max-width: 600px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+form input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+} */
+
+
+/* General Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa; /* Light grey background */
+    color: #343a40; /* Dark grey text */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #240678; /* Primary blue */
+    font-size: 2rem;
+}
+
+/* Container for the app */
+#app {
+    max-width: 700px;
+    margin: 20px auto;
+    background: #ffffff; /* White background */
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease;
+}
+
+#app:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+section {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd; /* Separator lines */
+    padding-bottom: 20px;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    color: #3f0a29; /* Dark violet */
+    margin-bottom: 10px;
+}
+
+/* Input Fields */
+form input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #007BFF; /* Highlight input on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Button Styles */
+button {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(to right, #007BFF, #0056b3); /* Gradient blue */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #0056b3, #004085); /* Darker gradient */
+    transform: scale(1.03); /* Slight grow effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#refreshInventory {
+    margin: 10px 0;
+    background: linear-gradient(to right, #927392, #004085); /* Success Green */
+}
+
+#refreshInventory:hover {
+    background: linear-gradient(to right, #927392, #004085);
+}
+
+/* Inventory List */
+#inventoryList {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+#inventoryList li {
+    background: #f1f1f1;
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border-left: 4px solid #007BFF; /* Left accent line */
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+#inventoryList li:hover {
+    background: #e9ecef;
+}
+
+/* Spinner Styles */
+.spinner {
+    display: none;
+    margin: 20px auto;
+    border: 6px solid #f3f3f3;
+    border-top: 6px solid #007BFF;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Success and Error Message */
+#orderMessage {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.success {
+    color: #28a745; /* Green for success */
+    background-color: #e6f8ec;
+}
+
+.error {
+    color: #dc3545; /* Red for error */
+    background-color: #f8d7da;
+}
+
+
+
+
+
+/* Section Styling */
+section {
+    margin-bottom: 30px;
+    background: linear-gradient(to bottom, #c8b6ff, #f4f2ff); /* Soft purple gradient */
+    padding: 20px 30px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Heading Styling */
+section h2 {
+    font-size: 1.5rem;
+    color: #5a5a5a; /* Darker grey for readability */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Input Fields */
+form input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: #ffffff; /* White input background */
+}
+
+form input:focus {
+    border-color: #a985f0; /* Light purple border focus */
+    box-shadow: 0 0 8px rgba(168, 133, 240, 0.5); /* Light purple glow */
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff; /* White text */
+    background: linear-gradient(to right, #a985f0, #8b68e8); /* Purple gradient */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #8b68e8, #7149c8); /* Darker purple on hover */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
