@@ -18,9 +18,12 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views  # Import the views from the current app
 from django.http import HttpResponse
+from django.shortcuts import render  # Import render for template rendering
+
 
 def home(request):
-    return HttpResponse("Welcome to the Home Page!")
+    # return HttpResponse("Welcome to the Home Page!")
+     return render(request, "index.html")  # Render the index.html file
 
 # Define URL patterns for the inventory service
 urlpatterns = [

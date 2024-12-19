@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDER AND INVENTORY MADEBUGNAGEMENT SYSTEM</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <h1>ORDER AND INVENTORY MANAGEMENT SYSTEM</h1>
+    <div id="app">
+        <!-- Order Form Section -->
+        <section>
+            <h2>Create Order</h2>
+            <form id="orderForm">
+                <input type="text" id="productName" placeholder="Product Name" required>
+                <input type="number" id="quantity" placeholder="Quantity" required>
+                <button type="submit">Place Order</button>
+            </form>
+            <p id="orderMessage"></p> <!-- Success/Error messages -->
+        </section>
+
+        <!-- Inventory Section -->
+        <section>
+            <h2>Inventory</h2>
+            <button id="refreshInventory">Refresh Inventory</button>
+            <div class="spinner" id="loadingSpinner"></div>
+            <ul id="inventoryList"></ul>
+        </section>
+    </div>
+
+    <script src="{% static 'scripts.js' %}"></script>
+</body>
+</html>

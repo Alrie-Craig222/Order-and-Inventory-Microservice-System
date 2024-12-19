@@ -16,6 +16,13 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Static files configuration
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, '../shared/static'),  # Serve static files from the frontend directory
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # For collecting static files
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
@@ -57,7 +64,7 @@ ROOT_URLCONF = 'inventory_service.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, '../shared/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,6 +76,8 @@ TEMPLATES = [
         },
     },
 ]
+
+STATIC_URL = '/static/'
 
 WSGI_APPLICATION = 'inventory_service.wsgi.application'
 
